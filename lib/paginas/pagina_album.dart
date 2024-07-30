@@ -5,7 +5,7 @@ import 'package:flutterejerciciowebservice/widgets/listview/listview_album.dart'
 import '../modelos/modelo_album.dart';
 
 class PaginaAlbum extends StatefulWidget {
-  const PaginaAlbum({Key? key}) : super(key: key);
+  const PaginaAlbum({super.key});
 
   @override
   State<StatefulWidget> createState() => _PaginaAlbumState();

@@ -15,10 +15,13 @@ class _ListviewAlbumState extends State<ListviewAlbum> {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text('ID: ${widget.albums[index].id} - ${widget.albums[index].title}'),
-          leading: Icon(Icons.album),
-          trailing: Icon(Icons.arrow_forward),
+        return Card(
+          child: ListTile(
+            title: Text('${widget.albums[index].title}'),
+            subtitle: Text('ID: ${widget.albums[index].id} - UserID: ${widget.albums[index].userId}'),
+            leading: const Icon(Icons.album),
+            trailing: const Icon(Icons.arrow_forward),
+          ),
         );
       },
       itemCount: widget.albums.length,
